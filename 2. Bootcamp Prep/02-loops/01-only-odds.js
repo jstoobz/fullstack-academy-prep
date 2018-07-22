@@ -1,11 +1,8 @@
 const onlyOdds = (num) => {
-  let sum = 0;
-
-  for (let i = 1; i <= num; i++) {
-    if (i % 2 === 1) sum += i;
-  }
-
-  return sum;
+  return num < 1 ? 0 : Array.from([...Array(num)]).map((_, i) => i + 1).reduce((acc, el) => {
+    if (el % 2 === 1) return acc + el;
+    return acc;
+  }, 0);
 }
 
 console.log(onlyOdds(10));
