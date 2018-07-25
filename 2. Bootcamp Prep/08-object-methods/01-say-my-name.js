@@ -1,6 +1,6 @@
 const me = {
   name: 'James',
-  getGreeting: function () {
+  getGreeting: function() {
     return `Hi, my name is ${this.name}.`;
   },
 };
